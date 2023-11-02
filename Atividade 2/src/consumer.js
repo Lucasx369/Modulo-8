@@ -1,6 +1,5 @@
 const Kafka = require('no-kafka');
 
-
 const consumer = new Kafka.SimpleConsumer({ connectionString: '127.0.0.1:9092' }); 
 
 var data = function (messageSet) {
