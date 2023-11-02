@@ -9,8 +9,7 @@
 - Descrição clara dos parâmetros utilizados no docker-compose, em comentários no código ou no readme
 - Explicação do exemplo de produção e consumo de mensagem na documentação
 
-## Documentação
-### Descrição Geral
+## Descrição Geral
 
 **Objetivo Geral**: Criar um ambiente Docker com Kafka e ZooKeeper.
 - Passo 1: Usar o Docker Compose para configurar Kafka e ZooKeeper.
@@ -18,13 +17,13 @@
 - Passo 3: Criar um exemplo funcional que demonstre a produção e consumo de mensagens com Kafka.
 
 Passos Completos:[Manual](https://github.com/Lucasx369/Modulo-8/tree/main/Atividade%202/src)
-
-### Docker
+### Tecnologias e Ferramentas
+#### Docker
 O docker é um software usado para implantar aplicativos dentro de containers virtuais. A conteinerização permite que vários aplicativos funcionem em diferentes ambientes complexos. Assim, o objetivo dos containers é criar independência: a habilidade de executar diversos processos e apps separadamente para utilizar melhor a infraestrutura e manter a segurança.
 
 Referência: [Docker: desenvolvimento de aplicações em containers](https://www.redhat.com/pt-br/topics/containers/what-is-docker)
 
-### Kafka
+#### Kafka
 O Apache Kafka (Figura 1) é uma plataforma de streaming distribuído capaz de manipular trilhões de eventos por dia. A ferramenta foi inicialmente concebida como uma fila de mensagens, porém rapidamente evoluiu para um plataforma de streaming completa (com a capacidade de armazenar e processar os dados em um fluxo.). 
 
 <img width="1000" alt="image" src="https://github.com/Lucasx369/Modulo-8/blob/main/Atividade%202/assets/kafka.png">
@@ -48,7 +47,7 @@ Um aspecto fundamental da arquitetura do Kafka é que os produtores de dados env
 - Consumer: são responsáveis por ler mensagens de partições específicas de um tópico. Cada Consumer lê de uma ou mais partições, dependendo de como são configurados.
 
 Referência: [Apache Kafka](https://medium.com/trainingcenter/apache-kafka-838882261e83)
-### Zookeeper
+#### Zookeeper
 O Apache ZooKeeper é um serviço centralizado para manter informações de configuração, nomear, fornecer sincronização distribuída e fornecer serviços de grupo. Nesse contexto, ele será usado paracoordenar as ações dos brokers Kafka em um cluster.
 
 Referência: [Apache ZooKeeper](https://docs.aws.amazon.com/pt_br/emr/latest/ReleaseGuide/emr-zookeeper.html)
