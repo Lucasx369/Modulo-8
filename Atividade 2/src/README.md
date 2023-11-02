@@ -1,43 +1,109 @@
-# Atividade
+# Documentação
 
-### Criação de um docker-compose com todos os parâmetros de um kafka e seus gerenciadores e um exemplo de produção e consumo de mensagem local.
+### Docker-Compose
+Neste arquivo são criados dois serviços, Zookeeper e Kafka, para criar um ambiente de mensagens em tempo real.
 
-**Critérios de Avaliação**
-- Criação do docker-compose com os parâmetros do kafka e seus gerenciadores (ex: zookeeper)
-- Utilização dos parâmetros (como Endpoint de conexão de filas) baseados na documentação da Apacha Kafka
-- Implementação funcional de um exemplo de produção e consumo de mensagem utilizando o kafka
-- Descrição clara dos parâmetros utilizados no docker-compose, em comentários no código ou no readme
-- Explicação do exemplo de produção e consumo de mensagem na documentação
+```yml
+# Define a versão do Docker Compose
+version: '3'
 
-## Documentação
-### Descrição Geral
+# Define os serviços que serão criados
+services:
+  #Define o zookeper
+  zookeeper:
+    # Imagem Docker que será usada para criar o contêiner
+    image: confluentinc/cp-zookeeper:latest
+    # Váriaveis de ambiente para o conteiner
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+    # Mapeia a porta 2181 do contêiner para a porta 2181 do host
+    ports:
+      - "2181:2181"
 
-### Docker
-O docker é um software usado para implantar aplicativos dentro de containers virtuais. A conteinerização permite que vários aplicativos funcionem em diferentes ambientes complexos. Assim, o objetivo dos containers é criar independência: a habilidade de executar diversos processos e apps separadamente para utilizar melhor a infraestrutura e manter a segurança.
+  #Define o kafka
+  kafka:
+    # Imagem Docker para criar o contêiner Kafka
+    image: confluentinc/cp-kafka:latest
+    # Define que o serviço Kafka depende do serviço Zookeeper.
+    depends_on:
+      - zookeeper
+    # Váriaveis de ambiente
+    environment:
+      # Identificação do broker
+      KAFKA_BROKER_ID: 1
+      # Porta e endereço de conexão
+      KAFKA_LISTENERS: PLAINTEXT://:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+      # Porta de conexão com o zookeeper
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+    # Mapeia a porta 9092 do contêiner para a porta 9092 do host
+    ports:
+      - "9092:9092"
+```
 
-Referência: [Docker: desenvolvimento de aplicações em containers](https://www.redhat.com/pt-br/topics/containers/what-is-docker)
+**Inicialização:**
 
-### Kafka
-O Apache Kafka é uma plataforma de streaming distribuído capaz de manipular trilhões de eventos por dia. A ferramenta foi inicialmente concebida como uma fila de mensagens, porém rapidamente evoluiu para um plataforma de streaming completa (com a capacidade de armazenar e processar os dados em um fluxo.). 
+```
+docker-compose up
+```
 
-**Principais Características**
-- Baixa latência: Capacidade de processar e entregar um alto fluxo de dados com pouco/mínimo atraso.
-- Tolerância a falhas: Garantia do funcionamento do sistema mesmo em caso de falhas.
+### Producer
+Neste arquivo é criado um produtor Kafka que permite ao usuário digitar mensagens que são enviadas para um tópico Kafka local chamado 'kafka-python-topic'. 
 
+```python
+# Importar classe para criar um produtor Kafka
+from kafka import KafkaProducer
 
-**Funcionamento**
-Um aspecto fundamental da arquitetura do Kafka é que os produtores de dados enviam mensagens para tópicos, e essas mensagens são particionadas e distribuídas entre os brokers. Os consumidores podem se inscrever nos tópicos e ler dados de qualquer uma das partições. Isso permite que o Kafka dimensione horizontalmente e lide com cargas massivas de leituras e gravações por segundo.
+# Especifica o endereço do servidor Kafka e define função de serialização dos valores 
+producer = KafkaProducer(bootstrap_servers='localhost:9092',  
+                        value_serializer=lambda v: str(v).encode('utf-8'))
+# Loop de produção de mensagens
+try:
+    while True:
+        # Recebe mensagem
+        value = input("Digite uma mensagem para enviar ao Kafka: ")
+        # Mensagem é enviada para o tópico
+        producer.send('kafka-python-topic', value=value)
+# Encerrar o programa
+except KeyboardInterrupt:
+    producer.close()
+```
 
+**Inicialização:**
 
-- Cluster: é um conjunto de servidores (ou brokers) Kafka que trabalham juntos para fornecer escalabilidade, alta disponibilidade e tolerância a falhas para a plataforma Kafka. 
-- Broker: é um nó individual no cluster Kafka. Cada broker é responsável por armazenar e gerenciar partições de tópicos, bem como lidar com solicitações de produtores e consumidores
-- Topic: é uma categoria no qual as mensagens são publicadas pelos produtores e consumidas pelos consumidores. Cada tópico representa um fluxo de mensagens relacionadas a um tópico específico, como logs de servidores, eventos de sensores, registros de pedidos, entre outros. Os tópicos são identificados por nomes, e as mensagens são publicadas em tópicos com base em sua relevância.
-- Partitions: são divisões do kafka topic, sendo ordenadas e compostas por um log de mensagens. Essas mensagens são anexadas à partição na ordem em que são recebidas. Além disso, as partições permitem que o Kafka distribua o processamento e o armazenamento de mensagens em vários brokers.
-- Producer: são responsáveis por mapear cada mensagem para uma partição do tópico. Isso é geralmente feito com base em uma chave ou algoritmo de particionamento. 
-- Consumer: são responsáveis por ler mensagens de partições específicas de um tópico. Cada Consumer lê de uma ou mais partições, dependendo de como são configurados.
+```
+python producer.py
+```
 
-Referência: [Apache Kafka](https://medium.com/trainingcenter/apache-kafka-838882261e83)
-### Zookeeper
-O Apache ZooKeeper é um serviço centralizado para manter informações de configuração, nomear, fornecer sincronização distribuída e fornecer serviços de grupo. Nesse contexto, ele será usado paracoordenar as ações dos brokers Kafka em um cluster.
+### Consumer
 
-Referência: [Apache ZooKeeper](https://docs.aws.amazon.com/pt_br/emr/latest/ReleaseGuide/emr-zookeeper.html)
+Neste arquivo é criado um consumidor Kafka que se conecta a um servidor Kafka local na porta 9092, consome mensagens do tópico 'kafka-python-topic' e imprime o conteúdo das mensagens no console.
+
+```javascript
+// Importar módulo para criar consumidor Kafka 
+const Kafka = require('no-kafka');
+
+// Especifica o endereço e a porta de conexão do servidor Kafka
+const consumer = new Kafka.SimpleConsumer({ connectionString: '127.0.0.1:9092' }); 
+
+# Função de tratamento e impressão da mensagem
+var data = function (messageSet) {
+    messageSet.forEach(function (m) {
+        var value = m.message.value.toString('utf8');
+        #Imprimir mensagem
+        console.log(value);
+    });
+};
+
+// Inicializar o consumidor
+return consumer.init().then(function () {
+    //Inscrever consumidor no tópico para consumir conteúdo
+    return consumer.subscribe('kafka-python-topic', data);
+});
+```
+
+**Inicialização:**
+
+```
+node consumer.js
+```
