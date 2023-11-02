@@ -86,11 +86,11 @@ const Kafka = require('no-kafka');
 // Especifica o endereço e a porta de conexão do servidor Kafka
 const consumer = new Kafka.SimpleConsumer({ connectionString: '127.0.0.1:9092' }); 
 
-# Função de tratamento e impressão da mensagem
+// Função de tratamento e impressão da mensagem
 var data = function (messageSet) {
     messageSet.forEach(function (m) {
         var value = m.message.value.toString('utf8');
-        #Imprimir mensagem
+        // Imprimir mensagem
         console.log(value);
     });
 };
