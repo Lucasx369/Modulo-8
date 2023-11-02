@@ -18,7 +18,11 @@ O docker é um software usado para implantar aplicativos dentro de containers vi
 Referência: [Docker: desenvolvimento de aplicações em containers](https://www.redhat.com/pt-br/topics/containers/what-is-docker)
 
 ### Kafka
-O Apache Kafka é uma plataforma de streaming distribuído capaz de manipular trilhões de eventos por dia. A ferramenta foi inicialmente concebida como uma fila de mensagens, porém rapidamente evoluiu para um plataforma de streaming completa (com a capacidade de armazenar e processar os dados em um fluxo.). 
+O Apache Kafka (Figura 1) é uma plataforma de streaming distribuído capaz de manipular trilhões de eventos por dia. A ferramenta foi inicialmente concebida como uma fila de mensagens, porém rapidamente evoluiu para um plataforma de streaming completa (com a capacidade de armazenar e processar os dados em um fluxo.). 
+
+<img width="1000" alt="image" src="https://github.com/Lucasx369/Modulo-8/blob/main/Atividade%202/assets/kafka.png">
+
+**Figura 1**. Arquitetura do Kafka. Fonte: Arquivo pessoal.
 
 **Principais Características**
 - Baixa latência: Capacidade de processar e entregar um alto fluxo de dados com pouco/mínimo atraso.
