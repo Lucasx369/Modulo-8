@@ -12,6 +12,13 @@
 ## Documentação
 ### Descrição Geral
 
+**Objetivo Geral**: Criar um ambiente Docker com Kafka e ZooKeeper.
+- Passo 1: Usar o Docker Compose para configurar Kafka e ZooKeeper.
+- Passo 2: Configurar o Kafka.
+- Passo 3: Criar um exemplo funcional que demonstre a produção e consumo de mensagens com Kafka.
+
+Passos Completos:[Manual](https://github.com/Lucasx369/Modulo-8/tree/main/Atividade%202/src)
+
 ### Docker
 O docker é um software usado para implantar aplicativos dentro de containers virtuais. A conteinerização permite que vários aplicativos funcionem em diferentes ambientes complexos. Assim, o objetivo dos containers é criar independência: a habilidade de executar diversos processos e apps separadamente para utilizar melhor a infraestrutura e manter a segurança.
 
