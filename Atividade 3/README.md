@@ -1,7 +1,19 @@
-# Modulo 8
+# Criação de um lambda com API gateway na AWS em python.
+## Descrição Geral
+Esta atividade consiste na criação e configuração de uma infraestrutura na AWS para criar um endpoint REST (Representational State Transfer) que utiliza o método POST e requer autenticação. O objetivo é permitir que os usuários acessem uma função Lambda por meio de uma API Gateway.
+
+## Ferramentas Utilizadas 
+
+**AWS Academy**: através desse recurso é possível acessar a AWS Educate, na qual oferece créditos de nuvem, laboratórios práticos e recursos adicionais. Neste ambiente, serão utilizadas AWS Lambda e API Gateway, para criar funções de computação que respondem a eventos, como requisições da API Gateway.
+
+**Visual Studio Code**: é um ambiente de desenvolvimento integrado (IDE) gratuito e de código aberto desenvolvido pela Microsoft. Ele é projetado para ser uma ferramenta versátil e leve que pode ser usada para desenvolver uma ampla variedade de aplicativos, desde aplicativos da web até aplicativos de desktop e serviços em nuvem. 
+
+**Thunder Client**: é uma extensão do Visual Studio Code que é usado para testar APIs diretamente do ambiente de desenvolvimento. 
+
 ## Orientação de acesso
-Username:
-Senha:
+No basic authentication inserir:
+- Username: lucas
+- Senha: inteliabc
 
 ## Criar Lambda
 **1) Pesquisar Lambda**
@@ -58,27 +70,37 @@ Por fim, clicar no botão em Criar função.
 
 <img width="1000" alt="image" src="https://github.com/Lucasx369/Modulo-8/blob/main/Atividade%203/assets/19.png">
 
-<img width="1000" alt="image" src="https://github.com/Lucasx369/Modulo-8/blob/main/Atividade%203/assets/21.png">
-
 ## Instalar Thunder Client 
 <img width="1000" alt="image" src="https://github.com/Lucasx369/Modulo-8/blob/main/Atividade%203/assets/22.png">
 
-## Trocar método GET por POST
+**1) Trocar método GET por POST**
 <img width="1000" alt="image" src="https://github.com/Lucasx369/Modulo-8/blob/main/Atividade%203/assets/23.png">
 
-## Teste sem autenticação
+### Teste sem autenticação
+
+**1) Função lambda sem autenticação**
 
 <img width="1000" alt="image" src="https://github.com/Lucasx369/Modulo-8/blob/main/Atividade%203/assets/25.png">
+
+**2) Imprimir JSON**
+
 <img width="1000" alt="image" src="https://github.com/Lucasx369/Modulo-8/blob/main/Atividade%203/assets/26.png">
 
-## Teste com autenticação
+### Teste com autenticação
 <img width="1000" alt="image" src="https://github.com/Lucasx369/Modulo-8/blob/main/Atividade%203/assets/27.png">
 
 ## Thunder Cliente
+
+**1) Função lambda com autenticação**
+
 <img width="1000" alt="image" src="https://github.com/Lucasx369/Modulo-8/blob/main/Atividade%203/assets/28.png">
+
+**2) Realizar a autenticação**
+No basica authentication inserir:
+- Username, por exemplo: lucas;
+- Password, por exemplo: inteliabc;
+Após a confirmação do acesso, é impresso o JSON.
 <img width="1000" alt="image" src="https://github.com/Lucasx369/Modulo-8/blob/main/Atividade%203/assets/29.png">
-<img width="1000" alt="image" src="https://github.com/Lucasx369/Modulo-8/blob/main/Atividade%203/assets/30.png">
-<img width="1000" alt="image" src="https://github.com/Lucasx369/Modulo-8/blob/main/Atividade%203/assets/31.png">
 
 ## Criar evento de teste na AWS 
 
@@ -117,13 +139,9 @@ Por fim, clicar no botão em Criar função.
 
 <img width="1000" alt="image" src="https://github.com/Lucasx369/Modulo-8/blob/main/Atividade%203/assets/32.png">
 
-## Mandar JSON
-## Imprimir JSON
-
 **3) Resultado do teste**
 
 **Resultado esperado:** Acesso não autorizado 
 
 <img width="1000" alt="image" src="https://github.com/Lucasx369/Modulo-8/blob/main/Atividade%203/assets/36.png">
-event -> É o que ele está recebendo (dicionário em json)
 
