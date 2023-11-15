@@ -37,4 +37,34 @@ Este arquivo contém os testes de integração para o aplicativo. Ele inclui tes
 
 ## Execução
 
+### Execução da Aplicação Flask
+
+Para rodar a aplicação Flask, é necessário executar o arquivo app.py. Isso pode ser feito através do seguinte comando no terminal:
+```
+python app.py
+```
+
+**Estrutura do Banco de Dados**
+
+<img width="1000" alt="image" src="https://github.com/Lucasx369/Modulo-8/blob/main/Atividade%204/assets/1.png">
+
+**Dados da Tabela**
+
+<img width="1000" alt="image" src="https://github.com/Lucasx369/Modulo-8/blob/main/Atividade%204/assets/2.png">
+
+**Resposta da API no Navegador**
+
+<img width="1000" alt="image" src="https://github.com/Lucasx369/Modulo-8/blob/main/Atividade%204/assets/3.png">
+
+### Execução do Teste
+Para rodar o teste, é necessário utilizar o pytest. Isso pode ser feito navegando até o diretório raiz do projeto e executando:
+```
+pytest
+```
+
+**Resultado do Teste**
+
+<img width="1000" alt="image" src="https://github.com/Lucasx369/Modulo-8/blob/main/Atividade%204/assets/4.png">
+
+
 
