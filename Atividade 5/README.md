@@ -16,19 +16,71 @@ As ferramentas de visualição de dados atendem a diferentes necessidades e pref
 Nesse aspecto, serão analisadas as ferramentas abaixo:
 
 #### Metabase 
-O Metabase é uma ferramenta de inteligência de negócios (BI) de código aberto, notável pela sua facilidade de uso e rápida implantação. Ela permite que usuários, mesmo sem conhecimento em SQL, façam perguntas e obtenham insights de seus dados através de uma interface amigável. Esta interface facilita a construção de consultas, gráficos e dashboards. 
+O Metabase é uma ferramenta de inteligência de negócios (BI), conhecida pela sua facilidade de uso e rápida implantação. Ela permite que usuários, mesmo sem conhecimento em SQL, construam gráficos e obtenham insights de seus dados através de uma interface amigável. Assim, facilita a construção de filtros, gráficos e dashboards. 
 
-Uma característica chave do Metabase é sua acessibilidade para usuários não técnicos, permitindo-lhes explorar dados de forma autônoma. A ferramenta inclui um construtor de consultas visuais, painéis interativos para análise de dados em larga escala, e a capacidade de criar modelos semânticos enriquecidos com metadados para consultas consistentes e eficientes. Em resumo, o Metabase é uma solução de BI versátil e acessível, ideal para democratizar a análise de dados em uma organização.
+Uma característica central do Metabase é sua acessibilidade para usuários não técnicos, permitindo-lhes explorar dados de forma autônoma. A ferramenta inclui um construtor de consultas visuais, painéis interativos para análise de dados em larga escala, e a capacidade de criar modelos semânticos enriquecidos com metadados para consultas consistentes e eficientes. 
 
 #### Grafana 
 O Grafana é uma plataforma de código aberto para análise e visualização de dados, destacando-se por sua flexibilidade e ampla aplicação em monitoramento de operações de TI, como desempenho de servidores e aplicações. Sua capacidade de integração com diversas fontes de dados (como Prometheus, InfluxDB, Elasticsearch) e uma interface altamente personalizável permite aos usuários criar painéis detalhados e atraentes. 
 
-O Grafana adota uma abordagem única de unificar dados de várias fontes em um único painel, sem exigir a centralização dos dados em um único local. É projetado para tornar os dados acessíveis a todos em uma organização, promovendo a quebra de silos de dados e empoderando as equipes. Oferece flexibilidade na criação de painéis personalizados com recursos avançados de consulta e transformação. Além disso, os painéis do Grafana são projetados para serem compartilháveis, facilitando a colaboração e a transparência dentro das equipes. Em suma, o Grafana é uma ferramenta poderosa para visualização de dados, focada na acessibilidade, personalização e colaboração.
+O Grafana adota uma abordagem única de unificar dados de várias fontes em um único painel, sem exigir a centralização dos dados em um único local. É projetado para tornar os dados acessíveis a todos em uma organização, promovendo a quebra de silos de dados e empoderando as equipes. Oferece flexibilidade na criação de painéis personalizados com recursos avançados de consulta e transformação. Além disso, os painéis do Grafana são projetados para serem compartilháveis, facilitando a colaboração e a transparência dentro das equipes.
 
 #### Power BI
-O Power BI é uma ferramenta de análise de negócios da Microsoft, focada em fornecer visualizações interativas e recursos de inteligência de negócios com uma interface simples, adequada para uso empresarial. Ela permite aos usuários criar e compartilhar visualizações de dados avançadas e interativas, utilizando diversas fontes de dados para oferecer insights de negócios importantes. O Power BI facilita a tomada de decisões baseadas em dados e suporta a colaboração, permitindo o compartilhamento de relatórios e insights através de aplicativos populares. 
+O Power BI é uma ferramenta de análise de negócios da Microsoft, focada em fornecer visualizações interativas e recursos de inteligência de negócios com uma interface simples, focada no uso empresarial. Ela permite aos usuários criar e compartilhar visualizações de dados avançadas e interativas, utilizando diversas fontes de dados para oferecer insights de negócios importantes. O Power BI facilita a tomada de decisões baseadas em dados e suporta a colaboração, permitindo o compartilhamento de relatórios e insights através de aplicações populares. 
 
-A ferramenta simplifica a criação e modificação de relatórios e painéis, e é integrada com ferramentas conhecidas como o Microsoft Excel, tornando-a acessível para usuários com diferentes níveis de habilidade técnica. Além disso, oferece acesso a recursos de aprendizado online gratuitos, ajudando os usuários a começarem rapidamente a trabalhar com a ferramenta e a disseminar o conhecimento dentro da empresa. Em suma, o Power BI é uma solução eficaz e colaborativa para análise de dados empresariais, combinando facilidade de uso com poderosas capacidades de visualização e análise.
+A ferramenta simplifica a criação e modificação de relatórios e painéis, e é integrada com ferramentas como o Microsoft Excel, tornando-a acessível para usuários com diferentes níveis de habilidade técnica. Além disso, oferece acesso a recursos de aprendizado online gratuitos, ajudando os usuários a começarem rapidamente a trabalhar com a ferramenta e a disseminar o conhecimento dentro da empresa. 
+
+### Detalhes Técnicos e Preços
+
+| Monitoramento | Power BI | Grafana | Metabase |
+|-------------|-------------|-------------|-------------|
+| 24 horas por dia        | :x:      | :x:      | :x:      |
+| Horário comercial | :white_check_mark:      | :x:      | :x:      |
+| On-line | :white_check_mark:      | :white_check_mark:     | :white_check_mark:      |
+| API | :white_check_mark:     | :white_check_mark:      | :white_check_mark:    |
+
+**Tabela 1**. Monitoramento de Acesso. Fonte: SaaSworthy
+
+| Implantação  | Power BI | Grafana | Metabase |
+|-------------|-------------|-------------|-------------|
+| SaaS/Web/Nuvem | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Móvel - Android | :white_check_mark: | :x: | :x: |
+| Móvel - iOS | :white_check_mark: | :x: | :x: |
+| Móvel - Windows | :x: | :x: | :x: |
+| Celular - BlackBerry | :x: | :x: | :x: |
+| Instalado - Windows | :x: | :white_check_mark: | :x: |
+| Instalado - Mac | :x: | :white_check_mark: | :white_check_mark: |
+
+**Tabela 2**. Implantação. Fonte: SaaSworthy
+
+
+| Clientes | Power BI | Grafana | Metabase |
+|-------------|-------------|-------------|-------------|
+| Indivíduos | :x: | :x: | :x: |
+| Freelancers | :x: | :x: | :x: |
+| Grandes Empresas | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Média empresa | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Pequenos negócios | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+
+**Tabela 3**. Implantação. Fonte: SaaSworthy
+
+| Preços | Power BI | Grafana | Metabase |
+|-------------|-------------|-------------|-------------|
+| Teste grátis | :x: | :white_check_mark: | :white_check_mark: |
+| Grátis | :x: | :x: | :white_check_mark: |
+| Licença única | :x: | :x: | :x: |
+| Código aberto | :x: | :white_check_mark: | :white_check_mark: |
+| Inscrição | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Baseado em cotação | :x: | :white_check_mark: | :white_check_mark: |
+
+**Tabela 4**. Modelo de Preços. Fonte: SaaSworthy
+
+### Ferramenta Escolhida
+O Grafana e o Power BI oferecem um conjunto de recursos e funcionalidades. Contudo, optamos pela utilização do Metabase, levando em consideração 2 aspectos principais:
+
+1. Preço: em comparação com alternativas de mercado, que podem ter custos associados, especialmente em escala empresarial, o Metabase oferece uma opção sem custo que se alinha perfeitamente com o objetivo atual do projeto de maximizar o valor entregue ao parceiro, utilizando ferramentas acessíveis, sem comprometer a qualidade. 
+
+2. Simplicidade: a ferramenta se destaca por sua acessibilidade a usuários não técnicos. Sendo assim, por se tratar de uma turma de graduação, que se encontra em processo de formação, esta ferramenta permite que consigam explorar e interpretar as informações de maneira simples, através de seu construtor intuitivo de consultas visuais e painéis interativos.
 
 ## Configuração da Ferramenta
 
@@ -44,6 +96,4 @@ A ferramenta simplifica a criação e modificação de relatórios e painéis, e
 
 "Microsoft PowerBI". Microsoft, 2023. Disponível em: <[URL](https://powerbi.microsoft.com/pt-br/landing/free-account/?ef_id=_k_CjwKCAiAvdCrBhBREiwAX6-6UrPlh70fkVf7G2UkGOT5C9o6q2m2uys9emKyBONyoZJIWsMrNors9xoCCmMQAvD_BwE_k_&OCID=AIDcmmk4cy2ahx_SEM__k_CjwKCAiAvdCrBhBREiwAX6-6UrPlh70fkVf7G2UkGOT5C9o6q2m2uys9emKyBONyoZJIWsMrNors9xoCCmMQAvD_BwE_k_&gad_source=1&gclid=CjwKCAiAvdCrBhBREiwAX6-6UrPlh70fkVf7G2UkGOT5C9o6q2m2uys9emKyBONyoZJIWsMrNors9xoCCmMQAvD_BwE)>. Acessado em 09 de Dezembro de 2023.
 
-https://www.saasworthy.com/compare/grafana-vs-metabase-vs-microsoft-power-bi-vs-trevor-io?pIds=5042,5906,6723,10031
-
-
+"Compare Microsoft Power BI vs Grafana vs Trevor.io vs Metabase". SaaSworthy, 2023. Disponível em: <[URL](https://www.saasworthy.com/compare/grafana-vs-metabase-vs-microsoft-power-bi-vs-trevor-io?pIds=5042,5906,6723,10031)>. Acessado em 09 de Dezembro de 2023.
