@@ -83,6 +83,20 @@ O Grafana e o Power BI oferecem um conjunto de recursos e funcionalidades. Contu
 2. Simplicidade: a ferramenta se destaca por sua acessibilidade a usuários não técnicos. Sendo assim, por se tratar de uma turma de graduação, que se encontra em processo de formação, esta ferramenta permite que consigam explorar e interpretar as informações de maneira simples, através de seu construtor intuitivo de consultas visuais e painéis interativos.
 
 ## Configuração da Ferramenta
+A execução do Metabase com Docker (é uma plataforma de contêinerização que permite empacotar aplicações em contêineres, facilitando a implantação e a escalabilidade) é um método popular para implantar essa ferramenta. E este método oferece um conjunto de vantagens, tais como:
+
+- Isolamento e consistência: o Docker garante que o Metabase funcione da mesma maneira em qualquer ambiente, pois todas as suas dependências estão contidas no contêiner.
+
+- Facilidade de implantação: Docker simplifica o processo de implantação, facilitando o processo de instalação e configuração de dependências específicas do ambiente de execução.
+
+- Escalabilidade: com o Docker, é fácil escalar o Metabase horizontalmente, sendo possível iniciar múltiplos contêineres do Metabase conforme necessário.
+
+- Atualizações simplificada: Atualizar para a versão mais recente do Metabase se torna simples dessa maneira. 
+
+### Processo de Configuração 
+
+Inicialmente é preciso realizar a instalação do Docker. Após instalado é possível executar a versão Open Source do Metabase localmente, seguindo o passo a passo abaixo, através do terminal. 
+
 
 ## Criação da Visualização
 
