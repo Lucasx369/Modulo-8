@@ -97,6 +97,19 @@ A execução do Metabase com Docker (é uma plataforma de contêinerização que
 
 Inicialmente é preciso realizar a instalação do Docker. Após instalado é possível executar a versão Open Source do Metabase localmente, seguindo o passo a passo abaixo, através do terminal. 
 
+1° Com o Docker instalado e em execução, é possível obter a imagem mais recente do Docker:
+```
+docker pull metabase/metabase:latest
+```
+
+2° Inicie o contêiner Metabase:
+```
+docker run -d -p 3000:3000 --name metabase metabase/metabase
+```
+
+Com isso, um servidor Metabase na porta 3000 por padrão. Assim que a inicialização for concluída, é possível acessar a metabase em http://localhost:3000.
+
+
 
 ## Criação da Visualização
 
