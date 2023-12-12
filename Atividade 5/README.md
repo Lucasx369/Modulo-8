@@ -107,9 +107,62 @@ docker pull metabase/metabase:latest
 docker run -d -p 3000:3000 --name metabase metabase/metabase
 ```
 
-Com isso, um servidor Metabase na porta 3000 por padrão. Assim que a inicialização for concluída, é possível acessar a metabase em http://localhost:3000.
+
+Com isso, um servidor Metabase na porta 3000 por padrão. Assim que a inicialização for concluída (Figura 1), é possível acessar a metabase em http://localhost:3000 (Figura 2).
+
+<img width="1000" alt="image" src="https://github.com/Lucasx369/Modulo-8/blob/main/Atividade%205/Assets/Docker.png">
+
+**Figura 1**. Docker - Contêiner Metabase. Fonte: Arquivo Pessoal. 
+
+<img width="1000" alt="image" src="https://github.com/Lucasx369/Modulo-8/blob/main/Atividade%205/Assets/Metabase.png">
+
+**Figura 2**. Metabase - Tela Inicial. Fonte: Arquivo Pessoal. 
+
+### Processo de importação de dados
+No Metabase, é possível importar e processar dados de várias maneiras. Para isso, pode se conectá-lo diretamente com uma ampla variedade de banco de dados, entre eles estão: PostgreSQL, MySQL, MongoDB, SQL Server, entre outros. E para efeturar a conexão basta inserir as credenciais necessárias na interface de administração do Metabase. Nesta atividade, será utilizada a conta do Metabase da turma de Sistemas da Informação, que já possui uma variedade de base de dadas tratadas. Essa bases foram importadas do Amazon Redshift, abaixo há uma demonstração de como fazer esta importação. 
+
+#### Importar dados do Amazon Redshift 
+
+#### 1) Acessar o Metabase e ir para administração
+
+Primeiramente é preciso ir para a área de Administração clicando na opção `Configurações de admin` no canto superior direito (Figura 3).
+
+<img width="1000" alt="image" src="https://github.com/Lucasx369/Modulo-8/blob/main/Atividade%205/Assets/1.png">
+
+**Figura 3**. Acessar configuração de administrador. Fonte: Arquivo Pessoal. 
+
+#### 2) Adicionar o banco de dados
+
+Na área de Administração, selecione `Bancos de Dados` (Figura 4) e clique em `Adicionar banco de dados` (Figura 5).
+
+<img width="1000" alt="image" src="https://github.com/Lucasx369/Modulo-8/blob/main/Atividade%205/Assets/2.png">
+
+**Figura 4**. Página de Administrador - Banco de Dados. Fonte: Arquivo Pessoal. 
 
 
+<img width="1000" alt="image" src="https://github.com/Lucasx369/Modulo-8/blob/main/Atividade%205/Assets/3.png">
+
+**Figura 5**. Página de Banco de Dados - Criação. Fonte: Arquivo Pessoal. 
+
+#### 3) Preencher os Detalhes da Conexão
+No formulário de adição de banco de dados:
+- Primeiramente é preciso selecionar o tipo de banco de dados `Amazon Redshift` (Figura 6).
+- Posteriormente, basta preencher os campos com as informações coletadas do banco de dados Redshift (hostname, porta, nome do banco de dados, usuário, senha).
+
+<img width="1000" alt="image" src="https://github.com/Lucasx369/Modulo-8/blob/main/Atividade%205/Assets/4.png">
+
+**Figura 6**. Tipo de banco de dados. Fonte: Arquivo Pessoal. 
+
+Informações do banco de dados (Figura 7):
+- Hostname: O endereço do servidor onde o Redshift está hospedado.
+- Porta: A porta usada para se conectar ao Redshift (geralmente é a 5439).
+- Nome do Banco de Dados: O nome específico do banco de dados dentro do Redshift que deseja acessar.
+- Usuário: O nome de usuário para acessar o banco de dados.
+- Senha: A senha associada ao usuário.
+
+<img width="1000" alt="image" src="https://github.com/Lucasx369/Modulo-8/blob/main/Atividade%205/Assets/5.png">
+
+**Figura 7**. Informações do Redshift. Fonte: Arquivo Pessoal.
 
 ## Criação da Visualização
 
