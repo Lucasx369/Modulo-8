@@ -165,6 +165,19 @@ Informações do banco de dados (Figura 7):
 **Figura 7**. Informações do Redshift. Fonte: Arquivo Pessoal.
 
 ## Criação da Visualização
+Abaixo é realizado um passo a passo para criar uma análise no Metabase, desde a seleção dos dados até a visualização em um gráfico.
+
+<img width="1000" alt="image" src="https://github.com/Lucasx369/Modulo-8/blob/main/Atividade%205/Assets/8.png">
+
+<img width="1000" alt="image" src="https://github.com/Lucasx369/Modulo-8/blob/main/Atividade%205/Assets/9.png">
+
+<img width="1000" alt="image" src="https://github.com/Lucasx369/Modulo-8/blob/main/Atividade%205/Assets/10.png">
+
+<img width="1000" alt="image" src="https://github.com/Lucasx369/Modulo-8/blob/main/Atividade%205/Assets/11.png">
+
+<img width="1000" alt="image" src="https://github.com/Lucasx369/Modulo-8/blob/main/Atividade%205/Assets/13.png">
+
+
 
 ## Análise de Dados
 
