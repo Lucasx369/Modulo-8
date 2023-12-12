@@ -167,19 +167,64 @@ Informações do banco de dados (Figura 7):
 ## Criação da Visualização
 Abaixo é realizado um passo a passo para criar uma análise no Metabase, desde a seleção dos dados até a visualização em um gráfico.
 
+#### 1) Selecionar a coleção
+Na tela inicial do Metabase, é preciso escolher a coleção que deseja trabalhar (Figura 8). Neste caso, será a coleção chamada `Ponderada Afonso`.
+
+#### 2) Iniciar a criação de uma nova pergunta
+Clique no botão "Novo" no canto superior direito e selecione "Pergunta" (Figura 8).
+
 <img width="1000" alt="image" src="https://github.com/Lucasx369/Modulo-8/blob/main/Atividade%205/Assets/8.png">
+
+**Figura 8**. Coleção selecionada. Fonte: Arquivo Pessoal.
+
+#### 3) Selecionar a fonte de dados
+Na tela "Selecione seu dado inicial", escolha o banco de dados ou esquema que contém a tabela com os dados desejados (Figura 9). Neste caso, foi selecionada a base `Integrational`.
 
 <img width="1000" alt="image" src="https://github.com/Lucasx369/Modulo-8/blob/main/Atividade%205/Assets/9.png">
 
+**Figura 9**. Fonte de dados. Fonte: Arquivo Pessoal.
+
+#### 4) Escolher a Tabela
+Depois de expandir o banco de dados "Integrational", selecione a tabela apropriada (Tabela 10). Neste caso, foi escolhida a tabela `Api Sale`.
+
 <img width="1000" alt="image" src="https://github.com/Lucasx369/Modulo-8/blob/main/Atividade%205/Assets/10.png">
+
+**Figura 10**. Tabela selecionada. Fonte: Arquivo Pessoal.
+
+#### 5) Configurar a Análise
+
+Na interface de criação de perguntas (Figura 11):
+
+- Em "Dados", confirme que a tabela correta está selecionada (Api Sale).
+- Em "Sumarizar", escolha a operação de agregação desejada, como "Sum of Preço".
+- Depois, escolha "por Produto" para agrupar os resultados pela coluna de produto.
+
+Além disso, os dados foram ordenados. E por fim, clique em `Visualizar` para ver o resultado da análise. 
 
 <img width="1000" alt="image" src="https://github.com/Lucasx369/Modulo-8/blob/main/Atividade%205/Assets/11.png">
 
+**Figura 11**. Interface de criação de perguntas. Fonte: Arquivo Pessoal.
+
+Assim é gerado um gráfico de barras (Figura 12) mostrando a soma dos preços para cada produto.
+
 <img width="1000" alt="image" src="https://github.com/Lucasx369/Modulo-8/blob/main/Atividade%205/Assets/13.png">
 
-
+**Figura 12**. Gráfico - Preço total por produtos. Fonte: Arquivo Pessoal.
 
 ## Análise de Dados
+
+### Justificativa do tipo de gráfico
+
+Para realizar a análise do valor total de vendas por produto foi utilizado o gráfico de barras, pois ele é ideal para comparações de categorias distintas, como diferentes produtos. Nesse aspecto, as barras permitem uma fácil comparação do valor total de vendas entre produtos. Além disso, comprimento das barras fornece uma visualização imediata do desempenho relativo das vendas. 
+
+### Análise realizada
+
+O gráfico de valor total de vendas por produto é uma representação visual que proporciona insights valiosos para uma variedade de decisões empresariais, gerando como principais benefícios:
+
+- Visão clara do desempenho dos produtos, apresentando imediatamente quais itens estão gerando mais receita.
+- Identificação de tendências e padrões, revelando tendências sazonais ou de longo prazo no comportamento de compra.
+- Alocação de recursos de marketing, podendo identificar onde concentrar os esforços da área, promovendo produtos de alto desempenho ou desenvolvendo campanhas para aumentar as vendas dos menos vendidos.
+- Estratégia de preços, ao analisar o valor total de vendas em comparação com o volume de vendas, a empresa pode avaliar a eficácia da estratégia de precificação atual e fazer ajustes para maximizar a receita e a lucratividade.
 
 ## Referências
 
